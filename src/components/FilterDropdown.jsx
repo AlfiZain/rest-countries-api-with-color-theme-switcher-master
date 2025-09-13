@@ -16,7 +16,7 @@ export default function FilterDropdown({ regions, regionSelected, onClick }) {
         />
       </button>
       <ul
-        className={`absolute top-16 flex w-2/3 flex-col space-y-2 rounded-md bg-White p-4 text-sm shadow-sm transition-all duration-300 sm:w-full dark:bg-Blue-900 ${isOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-10 opacity-0'}`}
+        className={`absolute top-16 z-10 flex w-2/3 flex-col space-y-2 rounded-md bg-White p-4 text-sm shadow-sm transition-all duration-300 sm:w-full dark:bg-Blue-900 ${isOpen ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-10 opacity-0'}`}
       >
         {regions.map((region, index) => (
           <li key={index}>

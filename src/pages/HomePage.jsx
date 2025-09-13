@@ -8,7 +8,7 @@ import useDebounce from '../hooks/useDebounce';
 
 export default function HomePage() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { data, isLoading, error } = useCountriesQuery();
+  const { data = [], isLoading, error } = useCountriesQuery();
   const [regionSelected, setRegionSelected] = useState(
     () => searchParams.get('region') || '',
   );
@@ -54,13 +54,13 @@ export default function HomePage() {
     );
   }, [data]);
 
-  if (isLoading) {
-    return (
-      <div className="flex min-h-[calc(100svh-4.5rem)] items-center justify-center bg-Grey-50 text-xl font-bold dark:bg-Blue-950">
-        <p>Loading data...</p>
-      </div>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <div className="flex min-h-[calc(100svh-4.5rem)] items-center justify-center bg-Grey-50 text-xl font-bold dark:bg-Blue-950">
+  //       <p>Loading data...</p>
+  //     </div>
+  //   );
+  // }
 
   if (error) {
     return (
@@ -80,13 +80,7 @@ export default function HomePage() {
           onClick={handleClickRegion}
         />
       </div>
-      {countries.length ? (
-        <CountriesCardList countries={countries} />
-      ) : (
-        <div className="my-16 flex items-center justify-center text-xl font-bold">
-          <p>No countries found</p>
-        </div>
-      )}
+      <CountriesCardList countries={countries} isLoading={isLoading} />
     </section>
   );
 }
