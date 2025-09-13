@@ -54,14 +54,6 @@ export default function HomePage() {
     );
   }, [data]);
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="flex min-h-[calc(100svh-4.5rem)] items-center justify-center bg-Grey-50 text-xl font-bold dark:bg-Blue-950">
-  //       <p>Loading data...</p>
-  //     </div>
-  //   );
-  // }
-
   if (error) {
     return (
       <div className="flex min-h-[calc(100svh-4.5rem)] items-center justify-center bg-Grey-50 text-xl font-bold dark:bg-Blue-950">
