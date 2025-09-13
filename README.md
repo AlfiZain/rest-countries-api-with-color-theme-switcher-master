@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-1Bk0jJVQz0](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-1Bk0jJVQz0)
+- Live Site URL: [https://rest-countries-api-with-color-theme-alfi.vercel.app/](htthttps://rest-countries-api-with-color-theme-alfi.vercel.app/)
 
 ## My process
 
