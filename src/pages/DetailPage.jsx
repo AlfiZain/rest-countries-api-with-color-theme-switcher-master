@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router';
 import useCountryDetail from '../hooks/useCountryDetail';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import useCountriesQuery from '../hooks/useCountriesQuery';
+import formatNumber from '../utils/formatNumber';
 
 export default function DetailPage() {
   const { alpha } = useParams();
@@ -31,8 +32,8 @@ export default function DetailPage() {
     (currency) => currency.name,
   );
   const allLanguages = Object.values(country.languages || []);
-  const borderCountryName = country.borders?.map(
-    (code) => countries?.find((c) => c.cca3 === code).name.common,
+  const borderCountryName = country.borders?.map((code) =>
+    countries?.find((c) => c.cca3 === code),
   );
 
   return (
@@ -59,7 +60,7 @@ export default function DetailPage() {
               <p>
                 Population:{' '}
                 <span className="font-light">
-                  {country.population ?? 'Unknown population'}
+                  {formatNumber(country.population) ?? 'Unknown population'}
                 </span>
               </p>
               <p>
@@ -112,13 +113,13 @@ export default function DetailPage() {
             <h3 className="shrink-0 py-2 text-xl">Border Countries:</h3>
             <div className="flex flex-wrap items-center gap-2">
               {borderCountryName ? (
-                borderCountryName?.map((country) => (
+                borderCountryName?.map((borderCountry) => (
                   <Link
-                    key={country}
-                    to={`/countries/${country}`}
+                    key={borderCountry.name.common}
+                    to={`/countries/${borderCountry.cca3}`}
                     className="rounded-md bg-White px-4 py-2 shadow-sm outline-none hover:ring-2 hover:ring-Grey-950 focus:ring-2 focus:ring-Grey-950 dark:bg-Blue-900 dark:hover:ring-White dark:focus:ring-White"
                   >
-                    {country}
+                    {borderCountry.name.common}
                   </Link>
                 ))
               ) : (
