@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-1Bk0jJVQz0](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher-1Bk0jJVQz0)
-- Live Site URL: [https://rest-countries-api-with-color-theme-alfi.vercel.app/](htthttps://rest-countries-api-with-color-theme-alfi.vercel.app/)
+- Live Site URL: [https://rest-countries-api-with-color-theme-alfi.vercel.app/](https://rest-countries-api-with-color-theme-alfi.vercel.app/)
 
 ## My process
 
